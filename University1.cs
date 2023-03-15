@@ -1,20 +1,17 @@
+using System.Collections.Generic;
 public class University1
 {
     public string name;
-    public Student[] students;
-    public int noOfStudents;
-    public string department;
+    public LinkedList<Student> student = new LinkedList<Student>();
+    public  LinkedList<string> department = new LinkedList<string>();
 
-    public University1(string name, string department)
+    public University1(string name)
     {
         this.name = name;
-        this.department = department;
-        this.students = new Student[20];  
     }
-    public void AssignStudent(Student student)
+    public void StudentAdmmission(Student student)
     {
-        this.students[noOfStudents] = student;
-        noOfStudents++;
+       this.student.AddLast(student);
     }
 
 }
