@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace University
 {
@@ -21,7 +22,7 @@ namespace University
 
             st1.Exam(course1, 75);
             st3.Exam(course1, 70);
-            Course c = st1.course.Find(course1).Value;
+            Course c = st1.course.FirstOrDefault(i => i.code == course1.code);
             c.Result();
             
 
